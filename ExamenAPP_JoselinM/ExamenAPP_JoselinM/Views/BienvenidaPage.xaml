@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenAPP_JoselinM.Views.BienvenidaPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="50, 25, 50,25">
+            
+            <Button x:Name="BtnEnter" Text="ENTER" BackgroundColor="DarkGreen" CornerRadius="15" Clicked="BtnEnter_Clicked" /> 
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

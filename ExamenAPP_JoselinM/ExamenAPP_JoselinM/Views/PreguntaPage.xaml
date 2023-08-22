@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenAPP_JoselinM.Views.PreguntaPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" >
+
+            <Label x:Name="LblUserName" TextColor="DeepSkyBlue" FontSize="20" 
+                  HorizontalTextAlignment="Center" 
+                   Padding="0,10,0,10"/>
+
+            <Entry x:Name="TxtDate" Placeholder="Date" Keyboard="Text" ClearButtonVisibility="WhileEditing" >
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <Entry x:Name="TxtAsk" Placeholder="Ask" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <Entry x:Name="TxtUser" Placeholder="User" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+            
+
+            <Picker x:Name="PkrAskStatus" Title="Select Ask Status" ItemDisplayBinding="{Binding AskStatus1}">
+            </Picker>
+
+
+            <Entry x:Name="TxtImage" Placeholder="ImageURL" Keyboard="Text" ClearButtonVisibility="WhileEditing" >
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <Entry x:Name="TxtAskDetail" Placeholder="AskDetail"  Keyboard="Text"  ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <StackLayout Orientation="Horizontal" >
+                <Button x:Name="BtnAdd" Text="Apply" CornerRadius="15" BackgroundColor="DarkGreen" FontSize="20" Clicked="BtnAdd_Clicked" />
+                <Button x:Name="BtnCancel" Text="Cancel" CornerRadius="15" BackgroundColor="Maroon" FontSize="20" Clicked="BtnCancel_Clicked"/>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
