@@ -31,7 +31,7 @@
                 </Entry.Triggers>
             </Entry>
 
-            <Entry x:Name="TxtUser" Placeholder="User" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+            <Entry x:Name="TxtUser" IsEnabled="False" Placeholder="User" Keyboard="Text" ClearButtonVisibility="WhileEditing">
                 <Entry.Triggers>
                     <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
                         <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
@@ -70,8 +70,9 @@
             </Entry>
 
             <StackLayout Orientation="Horizontal" >
-                <Button x:Name="BtnAdd" Text="Apply" CornerRadius="15" BackgroundColor="DarkGreen" FontSize="20" Clicked="BtnAdd_Clicked" />
-                <Button x:Name="BtnCancel" Text="Cancel" CornerRadius="15" BackgroundColor="Maroon" FontSize="20" Clicked="BtnCancel_Clicked"/>
+                <Button x:Name="BtnAdd" Text="Agregar" CornerRadius="15" BackgroundColor="DarkGreen" FontSize="20" Clicked="BtnAdd_Clicked" />
+                <Button x:Name="BtnCancel" Text="Cancelar" CornerRadius="15" BackgroundColor="Maroon" FontSize="20" Clicked="BtnCancel_Clicked"/>
+                <Button x:Name="BtnPreguntas" Text="Ver Preguntas" CornerRadius="15" BackgroundColor="MediumPurple" FontSize="20" Clicked="BtnPreguntas_Clicked"  />
             </StackLayout>
 
 

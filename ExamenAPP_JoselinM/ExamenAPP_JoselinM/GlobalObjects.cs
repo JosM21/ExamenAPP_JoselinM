@@ -9,5 +9,7 @@ namespace ExamenAPI_JoselinM
         public static string ContentType = "Content-Type";
 
         public static User MyLocalUser = new User();
+
+        public static Ask MyLocalAsks = new Ask();
     }
 }

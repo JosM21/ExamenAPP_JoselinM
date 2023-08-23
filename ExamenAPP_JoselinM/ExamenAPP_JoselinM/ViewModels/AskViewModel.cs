@@ -2,6 +2,7 @@
 using ExamenAPP_JoselinM.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -114,6 +115,34 @@ namespace ExamenAPP_JoselinM.ViewModels
 
                 throw;
             }
+        }
+
+        public async Task<ObservableCollection<Ask>> GetAskAsync(int pAskID)
+        {
+            if (IsBusy) return null;
+            IsBusy = true;
+
+            try
+            {
+                ObservableCollection<Ask> asks = new ObservableCollection<Ask>();
+
+                MyAsk.AskId = pAskID;
+
+                asks = await MyAsk.GetAskListByUserID();
+
+                if (asks == null)
+                {
+                    return null;
+                }
+                return asks;
+
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+
         }
 
     }

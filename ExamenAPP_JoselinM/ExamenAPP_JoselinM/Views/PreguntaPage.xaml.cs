@@ -57,7 +57,12 @@ namespace ExamenAPP_JoselinM.Views
             if (R)
             {
                 await DisplayAlert(":)", "Ask created succesfully", "OK");
-                
+                TxtAsk.Text = null;
+                TxtAskDetail.Text = null;
+                TxtImage.Text = null;
+                SelectedAskStatus = null;
+
+
             }
             else
             {
@@ -68,6 +73,15 @@ namespace ExamenAPP_JoselinM.Views
 
         private void BtnCancel_Clicked(object sender, EventArgs e)
         {
+
+        }
+
+        private async void BtnPreguntas_Clicked(object sender, EventArgs e)
+        {
+
+           // GlobalObjects.MyLocalAsks = await viewModel.GetAskAsync();
+
+            await Navigation.PushAsync(new PreguntasPage());
 
         }
     }
